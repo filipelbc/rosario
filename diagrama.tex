@@ -1,0 +1,29 @@
+
+\newcommand{\lx}{30}
+\newcommand{\ly}{40}
+\newcommand{\ld}{20}
+\newcommand{\lw}{1}
+\newcommand{\lp}{(2*\lx)}
+
+\tikzstyle{conta}=[circle,fill,inner sep=2]
+\tikzstyle{misterio}=[circle,fill,inner sep=4]
+
+\draw[thick] (0,0) ellipse ({\lx} and {\ly}) (0,{-\ly}) -- ++(0,{-\ld}) node[misterio] {} -- ++(0,{-\ld/4});
+
+\fill[] ({-\lw},{-\ly-5*\ld/4}) rectangle ++({2*\lw},{-16*\lw});
+\fill[] ({-5*\lw},{-\ly-5*\ld/4-4*\lw}) rectangle ++({10*\lw},{-2*\lw});
+
+\foreach \d in {0,1,2}
+{
+    \path (0,{-\ly}) ++(0,{-(\d + 2)*\ld/6}) node[conta] {};
+}
+
+\foreach \a in {-90,-18,...,198}
+{
+    \path (0,0) + ({\lx},0) arc (0:{\a}:{\lx} and {\ly}) node[misterio] {};
+
+    \foreach \b in {0,...,9}
+    {
+        \path (0,0) + ({\lx},0) arc (0:{\a+(\b+2)*72/13}:{\lx} and {\ly}) node[conta] {};
+    }
+}

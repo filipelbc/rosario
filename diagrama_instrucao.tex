@@ -1,0 +1,36 @@
+
+\begin{tikzpicture}[x=1mm,y=1mm]
+
+    \input{diagrama.tex}
+
+    \usetikzlibrary{decorations.markings}
+
+    \tikzstyle{passo}=[circle,draw,inner sep=2]
+    \tikzstyle{seta}=[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{>}}},postaction={decorate}]
+
+    \newcommand{\indique}[5]{
+        \node[passo] (#1) at ({\lp},{#3}) {$#5$};
+        \draw[<-] ({#4},{#3}) -- node[anchor=south,align=center] {#2} (#1);
+    }
+
+    \draw[gray,seta] (0,0) + (0,{-0.9*\ly}) arc (-90:260:{0.9*\lx} and {0.9*\ly});
+
+    \indique{credo}{Sinal da Cruz \& Credo}{-\ly-5*\ld/4-5*\lw}{6*\lw}{1}
+
+    \indique{painosso}{Oferecimento \& Pai Nosso}{-\ly-\ld}{3}{2}
+
+    \indique{avemaria}{Ave Maria (3x)}{-\ly-\ld/2}{2}{3}
+
+    \indique{gloria}{Glória}{-\ly-\ld/6}{1}{4}
+
+    \indique{anuncio}{2\textsuperscript{o} Mistério \&\\ Pai Nosso}{-0.3*\ly}{\lx+\lw}{5}
+
+    \indique{avemaria2}{Ave Maria\\(10x)}{0.265*\ly}{\lx+0.5*\lw}{6}
+
+    \indique{fatima}{Glória \&\\ Oração de Fátima}{0.75*\ly}{0.70*\lx}{7}
+
+    \node[passo] (salve) at ({-0.65*\lp},{-\ly-1.5\lw}) {$8$};
+    \draw[<-] ({-2*\lw},{-\ly-1.5*\lw}) -- node[anchor=north,align=center] {Agradecimento \&\\Salve Rainha \&\\ Ladainha de\\ Nossa Senhora} (salve);
+
+\end{tikzpicture}
+
