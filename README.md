@@ -13,8 +13,8 @@ Livreto para auxiliar na oração do Santo Rosário.
 
 [Real Men Pray the Rosary](http://realmenpraytherosary.org/)
 
+[How to Pray the Rosary](http://www.how-to-pray-the-rosary-everyday.com/index.html)
+
 [Padre Paulo Ricardo](https://padrepauloricardo.org/episodios/o-santo-rosario)
 
 [Josemaría Escrivá](http://www.escrivaworks.org.br/book/santo_rosario-indice.htm)
-
-[How to Pray the Rosary](http://www.how-to-pray-the-rosary-everyday.com/index.html)
