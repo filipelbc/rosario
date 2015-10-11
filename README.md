@@ -17,3 +17,4 @@ Livreto para auxiliar na oração do Santo Rosário.
 
 [Josemaría Escrivá](http://www.escrivaworks.org.br/book/santo_rosario-indice.htm)
 
+[How to Pray the Rosary](http://www.how-to-pray-the-rosary-everyday.com/index.html)
