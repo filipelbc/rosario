@@ -1,118 +1,25 @@
-%===============================================================================
-\documentclass[10pt,a5paper]{book}
+% LaTeX Source
+%
+% Author:        Filipe L B Correia <filipelbc@gmail.com>
+% Last Change:   2015 Out 11 15:11:15
 
-\usepackage[brazilian]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern, multicol}
-
-% links
-\usepackage[hyphens]{url}
-\usepackage[hidelinks]{hyperref}
-
-% page size
-\usepackage[inner=1in, outer=0.5in, top=0.5in, bottom=0.7in, head=0.25in, foot=0.35in]{geometry}
-
-% pars
-\usepackage{parskip}
-\setlength{\parindent}{0em}
-\setlength{\parskip}{0.5em}
-
-% headers
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot[LE,RO]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-\fancypagestyle{plain}{
-    \fancyhf{}
-    \fancyfoot[LE,RO]{\thepage}
-    \renewcommand{\headrulewidth}{0pt}
-    \renewcommand{\footrulewidth}{0pt}
-}
-
-% titles
-\usepackage{titlesec}
-\titleformat{\chapter}{\bfseries\LARGE}{\thechapter}{1em}{}
-\titlespacing{\chapter}{0pt}{-2em}{0pt}
-\titleformat{\section}{\bfseries\Large}{\thesection}{1em}{}
-\titlespacing{\section}{0pt}{\parskip}{\parskip}
-\titleformat{\subsection}{\bfseries}{}{0em}{}
-\titlespacing{\subsection}{0pt}{\parskip}{\parskip}
-
-% diagram
-\usepackage{tikz}
-
-% others
-\newcommand{\from}[1]{\subsection*{#1}}
-
-\newcommand{\TODO}{\textcolor{red}{\ttfamily AFAZER}}
-
-\newcommand{\epigraph}[2]{%
-    \leftskip=0.3\textwidth \emph{#1}
-
-    \leftskip=0.3\textwidth \hfill -- #2
-
-    \leftskip=0em ~
-}
-
-\newenvironment{specialpage}{\mbox{} \vfill}{\vfill \mbox{}}
+\documentclass{rosario}
 
 %===============================================================================
 \begin{document}
 
-\title{O Santo Rosário}
+\title{O Santo\\Rosário}
 \author{}
 \date{}
 
-\pagestyle{empty}
-
-\begin{specialpage}
-    \begin{center}
-        \input{diagrama_capa.tex}
-    \end{center}
-\end{specialpage}
-
-\cleardoublepage
-
-\begin{specialpage}
-    \epigraph{Maria é o caminho mais curto para Jesus.}{São Luis Maria Grignion de Montfort}
-
-    \vfill
-
-    \epigraph{No Rosário encontrei os atractivos mais doces, mais suaves, mais eficazes e mais poderosos para me unir a Deus.}{Santa Teresa de Jesus}
-
-    \epigraph{O Rosário é a mais bela de todas as orações, a mais rica em graças e a que mais agrada à Santíssima Virgem.
-    Os erros modernos serão destruídos pelo Rosário.}{São Pio X}
-
-    \vfill
-
-    \epigraph{O Rosário é uma oração de grande significado e destinada a produzir frutos de santidade. \\ \\
-    Mediante o Rosário, o povo cristão aprende com Maria a contemplar a beleza do rosto de Cristo, e a experimentar a profundidade do seu amor.}{João Paulo II}
-
-    \vfill
-
-    \epigraph{Reze, reze! Quem muito reza se salva e salva os outros.
-    E qual oração pode ser mais bela e mais aceita a Nossa Senhora do que o Rosario? \\ \\
-    O Santo Rosário é a arma daqueles que querem vencer todas as batalhas. \\ \\
-    Meu filho, o melhor plano de oração é o santo rosário!}{São Pio de Pietrelcina}
-\end{specialpage}
-
-\cleardoublepage
-
-\setcounter{page}{1}
-\tableofcontents
-
-\pagestyle{plain}
+\maketitle
 
 %===============================================================================
 
 \chapter{Instruções}
 
 \begin{center}
-    \input{diagrama_instrucao.tex}
+    \input{img/instrucoes.tex}
 \end{center}
 
 \TODO
@@ -129,7 +36,7 @@ Pelo Sinal da santa cruz, livrai-nos Deus Nosso Senhor dos nossos inimigos.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
+\amen.
 
 %===============================================================================
 
@@ -155,7 +62,7 @@ na remissão dos pecados;
 na ressurreição da carne;
 na vida eterna.
 
-Amém.
+\amen.
 
 %===============================================================================
 
@@ -172,7 +79,7 @@ assim como nós perdoamos aos nossos devedores;
 e não nos deixeis cair em tentação;
 mas livrai-nos do mal.
 
-Amém.
+\amen.
 
 %===============================================================================
 
@@ -188,7 +95,7 @@ Santa Maria, Mãe de Deus,
 rogai por nós, pecadores,
 agora e na hora da nossa morte.
 
-Amém.
+\amen.
 
 %===============================================================================
 
@@ -215,7 +122,7 @@ Para que sejamos dignos das promessas de Cristo.
 Glória ao Pai, ao Filho, e ao Espírito Santo. \\
 Como era no princípio, agora e sempre.
 
-Amém.
+\amen.
 
 %===============================================================================
 
@@ -227,7 +134,7 @@ livrai-nos do fogo do inferno;
 levai as almas para o céu
 e socorrei principalmente as que mais precisarem.
 
-Amém.
+\amen.
 
 %===============================================================================
 
@@ -1234,7 +1141,7 @@ Isto não pode deixar de impeli-los a um corajoso testemunho daquela << grande a
 
 %===============================================================================
 
-\section{A Ressureição de Jesus}
+\section{A Ressurreição de Jesus}
 
 \from{Mateus 28, 1--10:}
 
@@ -1541,7 +1448,7 @@ e que, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria, sejamos
 
 Por Nosso Senhor, Jesus Cristo, vosso filho, que convosco vive e reina, pelos séculos dos séculos.
 
-Amém.
+\amen.
 
 %===============================================================================
 
