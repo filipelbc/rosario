@@ -3,17 +3,22 @@
 
     \input{img/diagrama.tex}
 
-    \usetikzlibrary{decorations.markings}
+    \usetikzlibrary{arrows,decorations.markings}
 
     \tikzstyle{passo}=[circle,draw,inner sep=2]
-    \tikzstyle{seta}=[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{>}}},postaction={decorate}]
+    \tikzstyle{seta}=[decoration={markings,mark=at position 1 with
+                        {\arrow[scale=2,>=latex']{>}}},postaction={decorate}]
 
     \newcommand{\indique}[5]{
         \node[passo] (#1) at ({\lp},{#3}) {$#5$};
         \draw[<-] ({#4},{#3}) -- node[anchor=south,align=center] {#2} (#1);
     }
 
-    \draw[gray,seta] (0,0) + (0,{-0.9*\ly}) arc (-90:260:{0.9*\lx} and {0.9*\ly});
+    \newcommand{\sentido}[3]{
+        \draw[gray,seta,thick] ({#1*cos(#2)*\lx},{#1*sin(#2)*\ly}) arc ({#2}:{#3}:{#1*\lx} and {#1*\ly}) --++ (-0.1,0.1);
+    }
+
+    \sentido{0.85}{-20}{55}
 
     \indique{credo}{Sinal da Cruz \& Credo}{-\ly-5*\ld/4-5*\lw}{6*\lw}{1}
 
@@ -23,13 +28,18 @@
 
     \indique{gloria}{Glória}{-\ly-\ld/6}{1}{4}
 
-    \indique{anuncio}{2\textsuperscript{o} Mistério \&\\ Pai Nosso}{-0.3*\ly}{\lx+\lw}{5}
+    \indique{anuncio2}{Mistério \&\\ Pai Nosso}{-0.32*\ly}{\lx+\lw}{5}
 
     \indique{avemaria2}{Ave Maria\\(10x)}{0.265*\ly}{\lx+0.5*\lw}{6}
 
     \indique{fatima}{Glória \&\\ Oração de Fátima}{0.75*\ly}{0.70*\lx}{7}
 
-    \node[passo] (salve) at ({-0.65*\lp},{-\ly-1.5\lw}) {$8$};
-    \draw[<-] ({-2*\lw},{-\ly-1.5*\lw}) -- node[anchor=north,align=center] {Agradecimento \&\\Salve Rainha \&\\ Ladainha de\\ Nossa Senhora} (salve);
+    \renewcommand{\indique}[5]{
+        \node[passo] (#1) at ({-0.65*\lp},{#3}) {$#5$};
+        \draw[->] (#1) -- node[anchor=north,align=center] {#2} ({#4},{#3});
+    }
+
+    \indique{salve}{Agradecimento \&\\Salve Rainha \&\\ Ladainha de\\ Nossa Senhora}{-\ly-1.5*\lw}{-2*\lw}{8}
 
 \end{tikzpicture}
+
